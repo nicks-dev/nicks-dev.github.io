@@ -1,11 +1,11 @@
 import React from "react";
 import "src/assets/styles/app.scss";
-import background from "src/assets/images/background@2x.png";
 import Layout from "./components/Layout/Layout";
 import {Provider} from "react-redux";
-import store, {useSelector} from "./store/store";
+import store from "./store/store";
 import {fetchUsers} from "./store/thunks/users-thunk";
 import {fetchComments} from "./store/thunks/comments-thunk";
+import background from "src/assets/images/background@2x.webp";
 
 const App = () => {
     store.dispatch(fetchUsers());
