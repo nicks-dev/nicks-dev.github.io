@@ -1,0 +1,19 @@
+@import "vars";
+
+@mixin before($point) {
+    @media (max-width: ($point - 1)) {
+        @content;
+    }
+}
+
+@mixin between($point1, $point2) {
+    @media (min-width: $point1) and (max-width: ($point2 - 1)) {
+        @content;
+    }
+}
+
+@mixin after($point) {
+    @media (min-width: $point) {
+        @content;
+    }
+}

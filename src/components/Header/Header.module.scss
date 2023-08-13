@@ -1,0 +1,58 @@
+@import "../../assets/styles/mixins";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    position: relative;
+    padding-top: 12px;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+    margin-bottom: 24px;
+
+    @include after($p768) {
+        padding-top: 32px;
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    &__likes {
+        display: flex;
+        align-items: center;
+
+        svg {
+            display: block;
+            width: 22px;
+            height: 22px;
+        }
+
+        span {
+            display: block;
+            margin-left: 8px;
+            white-space: nowrap;
+        }
+    }
+
+    &__line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+
+        svg {
+            display: block;
+        }
+    }
+
+    &__comments {
+        span {
+            display: inline-block;
+            & + span {
+                margin-left: 8px;
+            }
+        }
+    }
+}

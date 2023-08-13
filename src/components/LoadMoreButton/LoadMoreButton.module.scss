@@ -1,0 +1,46 @@
+.button {
+    align-self: center;
+    width: 100%;
+    max-width: 234px;
+    height: 36px;
+    border-radius: 4px;
+    background-color: #313439;
+    backdrop-filter: blur(14px);
+    padding: 8px 31px;
+    margin: 60px 0 auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: transparentize(#313439, 0.15);
+    }
+    &:active {
+        background-color: transparentize(#313439, 0.3);
+    }
+
+    &.loading {
+        pointer-events: none;
+        .spinner {
+            display: block;
+        }
+        .text {
+            display: none;
+        }
+    }
+}
+
+.spinner {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text {
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}

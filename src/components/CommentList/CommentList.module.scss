@@ -1,0 +1,12 @@
+.list {
+    //padding-bottom: 40px;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    & + .list {
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,21 @@
+@import "../../assets/styles/mixins";
+
+.layout {
+    overflow: hidden;
+
+    &__wrapper {
+        max-width: 610px;
+        margin: 0 auto;
+        padding: 20px 24px 76px;
+
+        @include after($p768) {
+            padding-bottom: 64px;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
