@@ -19,8 +19,8 @@ const LoadingScreen = () => {
     return (
         <div className={clsx(css.loading, !visible && css.hidden)}>
             <p>
-                Загружаем комментарии...
-                <br /> Подождите, пожалуйста
+                <span>Загружаем комментарии...</span>
+                <span>Подождите, пожалуйста</span>
             </p>
             <Spinner className={css.spinner} />
         </div>
