@@ -53,6 +53,7 @@
 
     &__body {
         flex-grow: 1;
+        max-width: calc(100% - 60px);
     }
 
     &__info {
@@ -66,9 +67,6 @@
             padding-top: 13px;
             padding-bottom: 13px;
         }
-    }
-
-    &__left {
     }
 
     &__author {
@@ -120,7 +118,7 @@
     }
 
     &__commentText {
-        max-width: calc(100% - 45px);
+        word-wrap: break-word;
     }
 }
 
